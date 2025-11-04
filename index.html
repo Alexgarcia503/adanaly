@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Me ama?</title>
+  <style>
+    body {
+      text-align: center;
+      background-color: #ffe4ec;
+      font-family: "Comic Sans MS", cursive;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      color: #ff4f81;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+
+    button {
+      font-size: 1.2em;
+      padding: 10px 25px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    #si {
+      background-color: #ff4f81;
+      color: white;
+    }
+
+    #no {
+      background-color: #ff1a1a;
+      color: white;
+      position: absolute;
+    }
+
+    #no:active {
+      transform: scale(0.9);
+    }
+  </style>
+</head>
+<body>
+  <h1>¿Me amaaaaaaaaaaaaaaaaaaaaaa?</h1>
+
+  <button id="si" onclick="window.location.href='respuesta.html'">Sí</button>
+  <button id="no">No, lo odio alexander me cae muy mal</button>
+
+  <script>
+    const noBtn = document.getElementById('no');
+    noBtn.addEventListener('click', () => {
+      const x = Math.random() * (window.innerWidth - noBtn.clientWidth);
+      const y = Math.random() * (window.innerHeight - noBtn.clientHeight);
+      noBtn.style.left = `${x}px`;
+      noBtn.style.top = `${y}px`;
+    });
+  </script>
+</body>
+</html>
